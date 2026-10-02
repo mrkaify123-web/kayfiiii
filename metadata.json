@@ -1,0 +1,6 @@
+{
+  "name": "Free Fire Hosting Manager",
+  "description": "Personal Free Fire hosting management dashboard with match scheduling, 4-series hourly generation, live countdown, earnings tracking, and iPhone-style glass navigation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

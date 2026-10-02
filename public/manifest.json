@@ -1,0 +1,18 @@
+{
+  "name": "Free Fire Hosting Manager",
+  "short_name": "FF Hosting",
+  "description": "Personal Free Fire hosting management dashboard with match scheduling, 4-series hourly generation, live countdown, earnings tracking, and iPhone-style glass navigation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0f19",
+  "theme_color": "#0f172a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+:root, [data-theme="light"], .light {
+  --background: #f2fbf9;
+  --app-background: var(--background);
+  --surface: rgba(255, 255, 255, 0.92);
+  --card-background: var(--surface);
+  --surface-secondary: #f0f6f5;
+  --surface-elevated: #ffffff;
+  --surface-hover: #e6f0ee;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-disabled: #94a3b8;
+  --border: #e2e8f0;
+  --border-color: var(--border);
+  --border-subtle: #edf2f7;
+  --icon: #475569;
+  --icon-muted: #94a3b8;
+  --button: #ffffff;
+  --button-text: #0f172a;
+  --button-secondary: #f1f5f9;
+  --button-secondary-text: #334155;
+  --input: #ffffff;
+  --input-text: #0f172a;
+  --input-placeholder: #94a3b8;
+  --input-border: #cbd5e1;
+  --nav-background: rgba(255, 255, 255, 0.88);
+  --nav-border: rgba(226, 232, 240, 0.85);
+  --shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  --shadow-color: rgba(0, 0, 0, 0.05);
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --overlay: rgba(15, 23, 42, 0.45);
+  --success: #10b981;
+  --success-background: rgba(16, 185, 129, 0.12);
+  --warning: #f59e0b;
+  --warning-background: rgba(245, 158, 11, 0.12);
+  --danger: #ef4444;
+  --danger-background: rgba(239, 68, 68, 0.12);
+  --accent: #14b8a6;
+  --accent-color: var(--accent);
+  --accent-soft: rgba(20, 184, 166, 0.15);
+  --accent-strong: #0f766e;
+}
+
+[data-theme="dark"], .dark {
+  --background: #0b0f19;
+  --app-background: var(--background);
+  --surface: rgba(15, 23, 42, 0.90);
+  --card-background: var(--surface);
+  --surface-secondary: #131b2e;
+  --surface-elevated: #1e293b;
+  --surface-hover: #233149;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-disabled: #64748b;
+  --border: #334155;
+  --border-color: var(--border);
+  --border-subtle: #1e293b;
+  --icon: #cbd5e1;
+  --icon-muted: #64748b;
+  --button: #1e293b;
+  --button-text: #f8fafc;
+  --button-secondary: #0f172a;
+  --button-secondary-text: #cbd5e1;
+  --input: #131b2e;
+  --input-text: #f8fafc;
+  --input-placeholder: #64748b;
+  --input-border: #334155;
+  --nav-background: rgba(15, 23, 42, 0.88);
+  --nav-border: rgba(51, 65, 85, 0.8);
+  --shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --overlay: rgba(3, 7, 18, 0.75);
+  --success: #34d399;
+  --success-background: rgba(52, 211, 153, 0.15);
+  --warning: #fbbf24;
+  --warning-background: rgba(251, 191, 36, 0.15);
+  --danger: #f87171;
+  --danger-background: rgba(248, 113, 113, 0.15);
+  --accent: #14b8a6;
+  --accent-color: var(--accent);
+  --accent-soft: rgba(20, 184, 166, 0.22);
+  --accent-strong: #5eead4;
+}
+
+@layer base {
+  :root {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --pb-safe: env(safe-area-inset-bottom, 16px);
+    --pt-safe: env(safe-area-inset-top, 0px);
+  }
+
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--background);
+    color: var(--text-primary);
+    transition: background-color 0.18s ease, color 0.18s ease;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.glass-panel {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 150, 150, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 150, 150, 0.4);
+}
